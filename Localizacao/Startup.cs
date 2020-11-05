@@ -32,7 +32,7 @@ namespace Localizacao
 
             services.Configure<RequestLocalizationOptions>(options =>
             {
-                var supportedCultures = new[] { new CultureInfo("en-US"), new CultureInfo("pt-BR") };
+                var supportedCultures = new[] { new CultureInfo("en-US"), new CultureInfo("pt-BR"), new CultureInfo("es") };
 
                 options.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
                 options.SupportedCultures = supportedCultures;

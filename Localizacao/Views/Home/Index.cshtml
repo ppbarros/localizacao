@@ -14,7 +14,6 @@
 @using Microsoft.AspNetCore.Builder
 @using Microsoft.AspNetCore.Http.Features
 @using Microsoft.AspNetCore.Localization
-@using Microsoft.AspNetCore.Mvc.Localization
 @using Microsoft.Extensions.Options
 
 @inject IViewLocalizer Localizer
@@ -36,5 +35,14 @@
                                                                                                                onchange="this.form.submit();"
                                                                                                                asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems">
         </select>
+    </form>
+</div>
+
+<div style="text-align:center">
+    <form id="fomrmulario">
+        <label for="name">@Localizer["Name"]</label><br /><input type="text" id="name" /> <br /><br />
+        <label for="email">@Localizer["Email"]</label><br /><input type="email" id="email" /><br /><br />
+        <label for="address">@Localizer["Address"]</label><br /><input type="text" id="address" /><br /><br />
+        <input type="submit" value="@Localizer["Submit"]" />
     </form>
 </div>
