@@ -50,5 +50,11 @@ namespace Localizacao.Controllers
 
             return LocalRedirect(returnUrl);
         }
+        
+        public IActionResult Formulario()
+        {
+            return View();
+        }
+
     }
 }
